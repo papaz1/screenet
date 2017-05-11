@@ -1,4 +1,4 @@
-package se.screenet;
+package se.screenet.bean;
 
 import org.springframework.stereotype.Component;
 
