@@ -9,14 +9,14 @@ import javax.persistence.Id;
 public class Resource {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO )
-    private long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }
