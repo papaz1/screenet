@@ -1,7 +1,7 @@
 package se.core.service;
 
-import se.core.domain.Resource;
+import se.core.domain.DomainOjbect;
 
 public interface ResourceService {
-    Resource getResource(Integer id);
+    DomainOjbect getResource(Integer id);
 }

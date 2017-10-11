@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Resource {
+public class DomainOjbect {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

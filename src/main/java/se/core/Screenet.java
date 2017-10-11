@@ -4,8 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import se.core.database.ScreenetDatabase;
-import se.core.domain.Resource;
+import se.core.domain.DomainOjbect;
 import se.core.repository.ResourceRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +13,7 @@ import org.slf4j.LoggerFactory;
 public class Screenet {
 
     private static final Logger log = LoggerFactory.getLogger(Screenet.class);
+
 
     public static void main(String[] args) {
         //ApplicationContext appContext = SpringApplication.run(Screenet.class, args);
@@ -27,10 +27,10 @@ public class Screenet {
     @Bean
     public CommandLineRunner demo(ResourceRepository resourceRepository) {
         return (args) -> {
-            resourceRepository.save(new Resource());
+            resourceRepository.save(new DomainOjbect());
             log.info("Database contents");
-            for (Resource resource : resourceRepository.findAll()) {
-                log.info("Here are the values from the database: " + String.valueOf(resource.getId()));
+            for (DomainOjbect domainOjbect : resourceRepository.findAll()) {
+                log.info("Here are the values from the database: " + String.valueOf(domainOjbect.getId()));
             }
         };
     }
